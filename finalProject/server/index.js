@@ -1,28 +1,20 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const mongoose = require("mongoose");
-const router = require("./routes/router");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const cookieParser = require("cookie-parser");
+const mainRoute = require("./routes/router");
+const userRoute = require("./routes/user");
+const authRoute = require("./routes/auth");
+const connection = require("./db");
 
 const app = express();
-
+const PORT = 5001;
 app.use(express.json());
 app.use(cors());
-app.use(cookieParser());
-app.use(router);
+app.use(mainRoute);
+app.use("/api/user", userRoute);
+app.use("/api/auth", authRoute);
 
-const PORT = 5001;
-
-mongoose
-  .connect("mongodb://localhost:27017/DormitoryDB")
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((err) => {
-    console.log("Error connecting to mongoDB", err);
-  });
+connection();
 
 app.listen(PORT, () => {
   console.log(`Connected to port ${PORT}`);

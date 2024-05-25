@@ -18,7 +18,7 @@ import {
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
-import Spinner from "./spinner/Spinner"; // Import the Spinner component
+import Spinner from "./spinner/Spinner";
 import "./styles.css";
 
 export const getAvailableRoomsCount = (roomData, bookingData) => {
@@ -31,7 +31,7 @@ export const getAvailableRoomsCount = (roomData, bookingData) => {
 
 const Rooms = () => {
   const [roomData, setRoomData] = useState([]);
-  const [loading, setLoading] = useState(true); // State for loading
+  const [loading, setLoading] = useState(true);
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
   const [rowDataToDelete, setRowDataToDelete] = useState(null);
   const [errorDialogOpen, setErrorDialogOpen] = useState(false);
@@ -41,11 +41,11 @@ const Rooms = () => {
     try {
       const res = await axios.get("http://localhost:5001/getRooms");
       setRoomData(res.data);
-      setLoading(false); // Set loading to false when data fetching is complete
+      setLoading(false);
     } catch (error) {
       console.error("Error fetching rooms:", error.message);
       alert("Error fetching rooms. Please try again later.");
-      setLoading(false); // Set loading to false on error
+      setLoading(false);
     }
   };
 

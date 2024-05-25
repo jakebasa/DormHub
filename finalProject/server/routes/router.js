@@ -140,11 +140,9 @@ router.post("/addBooking", async (req, res) => {
 router.patch("/editRoom/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const updatedRoom = await Rooms.findOneAndUpdate(
-      { _id: id }, // Filter condition
-      req.body, // Updated data
-      { new: true } // Return the updated document
-    );
+    const updatedRoom = await Rooms.findOneAndUpdate({ _id: id }, req.body, {
+      new: true,
+    });
 
     if (!updatedRoom) {
       return res.status(404).json({ message: "Room not found" });

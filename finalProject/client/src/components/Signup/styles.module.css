@@ -1,0 +1,130 @@
+.signup_container {
+  width: 100%;
+  min-height: 50vh;
+  /* background-color: #f5f5f5; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup_form_container {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
+    0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #610000;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.left h1 {
+  margin-top: 0;
+  color: white;
+  font-size: 30px;
+  align-self: center;
+  letter-spacing: 0.5px;
+}
+.left p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.855);
+  align-self: center;
+  text-align: center;
+  padding: 10px 50px;
+  letter-spacing: 0.3px;
+}
+
+.right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_container h1 {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: #610000;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.input {
+  outline: none;
+  border: none;
+  width: 370px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #edf5f3;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.error_msg {
+  width: 370px;
+  padding: 15px;
+  margin: 5px 0;
+  font-size: 14px;
+  background-color: #f34646;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.white_btn,
+.green_btn {
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  background-color: white;
+  border-radius: 20px;
+  width: 180px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.white_btn {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+.white_btn:hover {
+  color: white;
+  background-color: #460000;
+}
+.green_btn {
+  background-color: #610000;
+  color: white;
+  margin: 30px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+
+.green_btn:hover {
+  background-color: #e0a838;
+}

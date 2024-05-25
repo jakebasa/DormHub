@@ -5,14 +5,14 @@ import { getAvailableRoomsCount } from "./Rooms";
 import { Chart } from "react-google-charts";
 import "./DashboardStyles.css";
 import CountUp from "react-countup";
-import Spinner from "./spinner/Spinner"; // Import the Spinner component
+import Spinner from "./spinner/Spinner";
 
 const Dashboard = () => {
   const [totalRooms, setTotalRooms] = useState(0);
   const [availableRooms, setAvailableRooms] = useState(0);
   const [totalBookings, setTotalBookings] = useState(0);
-  const [data, setData] = useState([]); // State to hold the chart data
-  const [loading, setLoading] = useState(true); // State for loading
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchRoomsAndBookings = async () => {
@@ -40,10 +40,10 @@ const Dashboard = () => {
         ];
 
         setData(chartData);
-        setLoading(false); // Set loading to false when data fetching is complete
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching rooms and bookings:", error.message);
-        setLoading(false); // Set loading to false on error
+        setLoading(false);
       }
     };
 
@@ -51,7 +51,7 @@ const Dashboard = () => {
   }, []);
 
   if (loading) {
-    return <Spinner />; // Render spinner while loading
+    return <Spinner />;
   }
 
   return (
@@ -74,7 +74,7 @@ const Dashboard = () => {
                         component="div"
                         sx={{ color: "#ffff" }}
                       >
-                        <CountUp delay={0.9} end={totalRooms} duration={0.9} />
+                        <CountUp delay={0.5} end={totalRooms} duration={0.9} />
                       </Typography>
                       <Typography
                         gutterBottom
@@ -98,7 +98,7 @@ const Dashboard = () => {
                         sx={{ color: "#ffff" }}
                       >
                         <CountUp
-                          delay={0.9}
+                          delay={0.5}
                           end={availableRooms}
                           duration={0.9}
                         />
@@ -125,7 +125,7 @@ const Dashboard = () => {
                         sx={{ color: "#ffff" }}
                       >
                         <CountUp
-                          delay={0.9}
+                          delay={0.5}
                           end={totalBookings}
                           duration={0.9}
                         />

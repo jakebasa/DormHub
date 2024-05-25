@@ -22,7 +22,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import CalendarIcon from "@mui/icons-material/Event";
 import LogoutIcon from "@mui/icons-material/Logout";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Tooltip from "@mui/material/Tooltip";
 
 const drawerWidth = 240;
@@ -97,6 +97,7 @@ export default function Nav() {
   const [open, setOpen] = React.useState(false);
   const [activePage, setActivePage] = React.useState(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   React.useEffect(() => {
     setActivePage(location.pathname);
@@ -108,6 +109,14 @@ export default function Nav() {
 
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+
+  const handleLogout = () => {
+    // Clear user data (like tokens)
+    localStorage.removeItem("token");
+
+    // Redirect to login page
+    window.location.reload();
   };
 
   return (
@@ -228,7 +237,7 @@ export default function Nav() {
             <ListItem
               button
               key="Logout"
-              onClick={() => console.log("Logout clicked")}
+              onClick={handleLogout}
               sx={{
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",

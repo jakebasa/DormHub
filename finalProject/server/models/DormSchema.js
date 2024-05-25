@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
 
 const RoomSchema = new mongoose.Schema({
   roomNo: Number,
@@ -18,12 +19,12 @@ const TenantSchema = new mongoose.Schema({
 const BookingSchema = new mongoose.Schema({
   room: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Rooms", // Referencing the Rooms model
+    ref: "Rooms",
     required: true,
   },
   tenant: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Tenants", // Referencing the Rooms model
+    ref: "Tenants",
     required: true,
   },
   startDate: {
@@ -36,7 +37,6 @@ const BookingSchema = new mongoose.Schema({
   },
   totalAmount: Number,
 });
-
 const Rooms = mongoose.model("Rooms", RoomSchema, "rooms");
 const Tenants = mongoose.model("Tenants", TenantSchema, "tenants");
 const Booking = mongoose.model("Booking", BookingSchema, "bookings");

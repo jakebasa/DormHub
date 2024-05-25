@@ -186,7 +186,7 @@ const Tenants = () => {
   });
 
   if (loading) {
-    return <Spinner />; // Render spinner while loading
+    return <Spinner />;
   }
 
   return (
