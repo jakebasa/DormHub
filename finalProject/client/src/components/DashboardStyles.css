@@ -1,0 +1,26 @@
+.gradient1 {
+  background: rgb(40, 34, 70);
+  background: linear-gradient(
+    158deg,
+    rgb(40, 34, 70, 1) 0%,
+    rgba(30, 47, 141, 1) 100%
+  );
+}
+
+.gradient2 {
+  background: rgb(53, 138, 148);
+  background: linear-gradient(
+    158deg,
+    rgb(53, 138, 148, 1) 0%,
+    rgba(91, 180, 96, 1) 100%
+  );
+}
+
+.gradient3 {
+  background: rgb(97, 0, 0); 
+  background: linear-gradient(
+    158deg,
+    rgb(97, 0, 0, 1) 0%,
+    rgb(238, 143, 26) 100% 
+  );
+}
