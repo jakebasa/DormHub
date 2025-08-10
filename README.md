@@ -1,7 +1,7 @@
 # 🏠 Dormitory Management System
 
 A web-based application designed to simplify dormitory operations such as room assignments and tenant management.  
-Built with **Node.js**, **Express**, and **React** for efficient and modern management of dormitory facilities.
+Built with **Node.js**, **Express**, **MongoDB**, and **React** for efficient and modern management of dormitory facilities.
 
 ---
 
