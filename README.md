@@ -10,13 +10,13 @@ Built with **Node.js**, **Express**, and **React** for efficient and modern mana
 
 
 **Dashboard View**  
-![Dashboard Screenshot](./images/dashboard-placeholder.png)
+![Dashboard Screenshot](assets/dashboard.png)
 
 **Room Management**  
-![Room Management Screenshot](./images/room-management-placeholder.png)
+![Room Management Screenshot](assets/room.png)
 
 **Tenant Management**  
-![Tenant Profile Screenshot](./images/tenant-profile-placeholder.png)
+![Tenant Profile Screenshot](assets/tenant.png)
 
 ---
 
@@ -32,7 +32,7 @@ Built with **Node.js**, **Express**, and **React** for efficient and modern mana
 
 - **Frontend**: React, Vite, Tailwind CSS
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB *(or your actual DB)*
+- **Database**: MongoDB
 - **Others**: REST API, JWT Authentication
 
 ---
